@@ -1,0 +1,9 @@
+* {
+    box-sizing: border-box;
+}
+
+/* 1 - если input вложен в label, то id и for не нужны */
+
+/* 2 - <label for="name"> и <input id="name" - "for" и "id" связывают друг друга и есть обязательны */
+
+

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms-Topic 6</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+
+</head>
+<body>
+
+    <!--так почти не делают 
+        <br>1<br> 
+
+        <form class="form">
+        <label>Name
+            <input type="text" name="name"/>
+        </label>
+        </form>
+
+        -->
+
+
+   <br>2<br>
+   <h5>Доклад по IT-направлениям</h5>
+<form class="form" autocomplete="off"> <!--атрибут autocomplete вкл/выкл автозаполнение-->
+    <div role="form-input">
+        <label for="name">Name</label>
+        <input type="text" 
+        name="name" 
+        id="name"
+        placeholder="подсказка - Что ввести"/>
+
+        <label for="tel">Tel</label> 
+        <input type="tel" name="tel" id="tel"/>
+
+        <label for="mail">Mail</label> 
+        <input type="email" name="mail" id="mail"/>
+    </div>
+
+         <!--категории с "галочками"-->
+        
+    <!--не оборачивать в <fieldset>, потому что на него не действуют флексбоксы-->    
+    <div role="group"> <!--role повышает симантичность, но использовать только здесь-->
+        <input type="checkbox" name="topic" value="html" id="html">
+        <label for="html">Html</label>
+
+        <input type="checkbox" name="topic" value="css" id="html">
+        <label for="css">CSS</label>
+
+        <input type="checkbox" name="topic" value="js" id="js">
+        <label for="js">JS</label>
+    </div> 
+
+    <div role="group">
+        <input type="radio" name="experience" value="junior" id="junior">
+        <label for="junior">Junior</label>
+
+        <input type="radio" name="experience" value="midle" id="midle">
+        <label for="midle">Midle</label>
+
+        <input type="radio" name="experience" value="senior" id="senior">
+        <label for="senior">Senior</label>
+    </div>
+
+    <div role="group">
+        <input type="datetime-local" name="data" value="datetime" id="jdatetime">
+        <label for="datetime"
+        min="2022-12-01T12:30"
+        max="2023-01-01T12:30">Date and time</label>
+    </div>
+
+        <div role="group">
+        <input type="file" name="file" value="pdf" id="pdf">
+        <label for="pdf"></label>
+    </div>
+
+    
+    <div>
+        <label for="comments">Оставьте комментарий</label>
+        <textarea name="comments" value="comments" id="comments" rows="10"></textarea>
+    </div>
+     
+    <div>
+        <input type="checkbox" name="agreement" id="agreement">
+        <label for="agreement">Согласен отдать последние трусы</label>
+    </div>
+<!--выпадающий список-->
+    <div>
+        <p> Выбери любимый цвет</p>
+        <select>
+            <option value="red">Красный</option>
+            <option value="green">Зеленый</option>
+            <option value="blue">Желтый</option>
+        </select>
+    </div>
+
+    <div>
+        <button type="submit">Send</button>
+    </div>
+
+    </form>
+
+
+           
+    
+</body>
+</html>
